@@ -121,6 +121,7 @@ header{
     font-weight: 500;
 }
 /* some fact related style */
+
 .facts-card{
     border: 1px solid #FF900E;
     width: 240px;
@@ -133,6 +134,7 @@ header{
 .facts-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 .fact-number{
     font-size: 2.8rem;
@@ -140,7 +142,33 @@ header{
     margin-top: 5px;
     margin-bottom: 10px;
 }
+.section-titel{
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.section-p{
+    margin-bottom: 100px;
+    font-weight: 400;
+}
 
+/* sponsors section */
+.sponsr-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsors-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 auto;
+    
+}
+.sponsors-companies img{
+    filter: grayscale(100%);
+    padding: 0 24px;
+    /* width: 165px; */
+}
 
 /* resonsive media query */
 @media screen and (max-width:576px) {
@@ -154,19 +182,56 @@ header{
         margin-left: 20px;
         text-align: center;
     }
-    .team-img-container{
-        grid-template-columns: repeat(1, 1fr);
+    .fact-description{
+    margin: 0 auto;
     }
+    .team-img-container,
+    .facts-container ,
+    .sponsors-companies{
+    
+    grid-template-columns: repeat(1, 1fr);
+    
+    }
+    
+    .facts-container{
+        justify-items: center;
+        gap: 24px;
+    }
+    .sponsors-companies{
+        justify-items: center;
+        gap: 50px; 
+    }
+
 }
 
 /* medium size device */
 @media screen and (min-width:576px) and (max-width:992px) {
+    
     .teams 
     {
         flex-direction: column;
+    }
+    .fact-description{
+    margin: 0 auto;
     }
     .our-features{
         margin: 50px auto;
         text-align: center;
     }
+    .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .sponsors-companies{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        align-items: center;
+        /* place-items: center; */
+    }
+    /* .our-sponsors{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    } */
 }
