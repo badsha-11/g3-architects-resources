@@ -286,7 +286,7 @@ footer h5{
     }
 
     .sponsors-companies{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 50px;
         align-items: center;
         /* place-items: center; */
